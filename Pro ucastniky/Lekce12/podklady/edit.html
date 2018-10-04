@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Detail aktivity</title>
+</head>
+<body>
+    <div class="page">
+
+        <!--/*@thymesVar id="aktivita" type="cz.czechitas.webapp.AktivitaVCase"*/-->
+
+        <h1>Editace aktivity</h1>
+
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Popis</td>
+                    <td>
+                        <input name="popis" th:value="${aktivita.popis}" value="Programování domácí úlohy"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Začátek</td>
+                    <td>
+                        <input name="datumACasZacatku" value="31. 1. 2018 10:00"
+                               th:value="${#temporals.format(aktivita.datumACasZacatku, 'd. M. yyyy HH:mm')}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Délka</td>
+                    <td>
+                        <input name="delka" value="1:30"
+                               th:value="${aktivita.delka.toHours() + ':' + aktivita.delka.toMinutes() % 60}"/>
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Uložit" class="button"/>
+                        <a th:href="${'.'}" href="index.html" class="button">Zpět</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</body>
+</html>

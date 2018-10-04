@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="Assemble libs">
+    <output-path>$PROJECT_DIR$/build/lib</output-path>
+    <root id="root">
+      <element id="library" level="project" name="Bean Validation" />
+      <element id="library" level="project" name="Java EE 7 API without Servlet 3.1" />
+      <element id="library" level="project" name="JSTL 1.2" />
+      <element id="library" level="project" name="SLF4J" />
+      <element id="library" level="project" name="Spring Framework 4" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,42 @@
+<component name="libraryTable">
+  <library name="Tomcat">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/annotations-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/catalina-ant.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/catalina-ha.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/catalina-storeconfig.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/catalina-tribes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/catalina.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/ecj-4.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/el-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/jasper-el.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/jasper.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/jaspic-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/jsp-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/mariadb-java-client-1.4.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/tomcat-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/tomcat-coyote.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/tomcat-dbcp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/tomcat-jdbc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/tomcat-jni.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/tomcat-juli.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/tomcat-util-scan.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/tomcat-util.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/tomcat-websocket.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/websocket-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/apache-tomcat-8.5.2-src.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/apache-tomcat-8.5.2-src.zip!/apache-tomcat-8.5.2-src/java" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/apache-tomcat-8.5.2-src.zip!/apache-tomcat-8.5.2-src/modules/jdbc-pool/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/apache-tomcat-8.5.2-src.zip!/apache-tomcat-8.5.2-src/modules/jdbc-pool/src/test/java" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/apache-tomcat-8.5.2-src.zip!/apache-tomcat-8.5.2-src/test" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/apache-tomcat-8.5.2-src.zip!/apache-tomcat-8.5.2-src/webapps/docs/appdev/sample/src" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/apache-tomcat-8.5.2-src.zip!/apache-tomcat-8.5.2-src/webapps/examples/WEB-INF/classes" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/apache-tomcat-8.5.2-src.zip!/apache-tomcat-8.5.2-src/webapps/examples/WEB-INF/jsp/applet" />
+      <root url="jar://$PROJECT_DIR$/lib/Tomcat/apache-tomcat-8.5.2-src.zip!/apache-tomcat-8.5.2-src/webapps/examples/jsp/plugin/applet" />
+    </SOURCES>
+  </library>
+</component>

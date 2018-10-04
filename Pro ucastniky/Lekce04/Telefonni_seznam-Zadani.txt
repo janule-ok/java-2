@@ -1,0 +1,41 @@
+Krátký popis
+============
+Vytvořte webovou aplikaci zobrazující telefonní seznam světových velikánů.
+
+Aplikace zobrazí tabulku podobnou této:
++------------------------+-------------------+------------------+
+| Osoba                  | Stát              | Telefon          |
++------------------------+-------------------+------------------+
+| Thomas Alva Edison     | USA               | +1-123-555-666   |
+| Albert Einstein        | Švýcarsko         | +41 953 203 569  |
+| Marie Curie Sklodowská | Francie           | +33 7456 123 523 |
+| Johan Gregor Mendel    | Rakousko-Uhersko  | +420 544213255   |
+| Kamil Ševecek          | Česko             | +420 604 123 456 |
++------------------------+-------------------+------------------+
+
+
+Detailní popis
+==============
+Pro naše účely vytvořte třídu TelefonniKontakt, která bude mít tyto vlastnosti:
+
+class TelefonniKontakt
+  |
+  +-- String jmeno
+  |
+  +-- String stat
+  |
+  +-- String telefonniCislo
+
+Třídě TelefonniKontakt vytvořte i konstruktor, aby se její objekty snadno vyráběly:
+    public TelefonniKontakt(String pocatecniJmeno, String pocatecniStat, String pocatecniTelefonniCislo)
+
+V Controlleru vyrobte seznam osob pomocí:
+    List<TelefonniKontakt> seznamKontaktu;
+    seznamKontaktu = Arrays.asList(
+        new Osoba("Thomas Alva Edison", "USA", "+1-123-555-666"),
+        new Osoba("Albert Einstein", "Švýcarsko", "+41 953 203 569"),
+        atd.
+    );
+    
+Nezapomeňte se na konec seznamu připsat :-)
+    

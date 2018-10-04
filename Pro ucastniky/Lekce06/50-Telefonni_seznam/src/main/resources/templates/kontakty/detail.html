@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../../static/css/styly.css"
+          th:href="${'../css/styly.css'}"/>
+    <link rel="icon" href="../../static/images/favicon.png"
+          th:href="${'../images/favicon.png'}"/>
+    <title>Telefonní seznam</title>
+</head>
+<body>
+    <!--/*@thymesVar id="kontakt" type="cz.czechitas.webapp.TelefonniKontakt"*/-->
+
+    <div class="page">
+
+        <h1>Telefonní záznam</h1>
+
+        <table>
+            <tr>
+                <td>Číslo</td>
+                <td th:text="${kontakt.id}">1000</td>
+            </tr>
+            <tr>
+                <td>Jméno</td>
+                <td th:text="${kontakt.jmeno}">Krteček</td>
+            </tr>
+            <tr>
+                <td>Město</td>
+                <td th:text="${kontakt.mesto}">Praha</td>
+            </tr>
+            <tr>
+                <td>Stát</td>
+                <td th:text="${kontakt.stat}">Česko</td>
+            </tr>
+            <tr>
+                <td>Telefonní číslo</td>
+                <td th:text="${kontakt.telefon}">+420123456789</td>
+            </tr>
+        </table>
+
+        <a th:href="${'.'}" href="index.html">Zpět</a>
+
+    </div>
+</body>
+</html>

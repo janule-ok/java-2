@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="WAR exploded">
+    <output-path>$PROJECT_DIR$/target/exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="java-module/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="java-module" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring Framework 4" />
+          <element id="library" level="project" name="SLF4J" />
+          <element id="library" level="project" name="JSTL 1.2" />
+          <element id="library" level="project" name="Java EE 7 API without Servlet 3.1" />
+          <element id="library" level="project" name="Bean Validation" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

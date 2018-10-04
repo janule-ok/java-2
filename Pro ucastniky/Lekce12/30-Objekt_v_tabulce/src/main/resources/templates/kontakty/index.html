@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../../static/css/styly.css"
+          th:href="${'../css/styly.css'}"/>
+    <link rel="icon" href="../../static/images/favicon.png"
+          th:href="${'../images/favicon.png'}"/>
+    <title>Telefonní seznam</title>
+</head>
+<body>
+    <!--/*@thymesVar id="seznam" type="java.util.List<cz.czechitas.webapp.TelefonniKontakt>"*/-->
+
+    <div class="page">
+
+        <h1>Telefonní seznam</h1>
+
+        <table>
+            <tr>
+                <td>Číslo</td>
+                <td>Osoba</td>
+                <td>Stát</td>
+                <td>Telefon</td>
+                <td>Akce</td>
+            </tr>
+            <tr th:each="kontakt : ${seznam}">
+                <td th:text="${kontakt.id}">1000</td>
+                <td th:text="${kontakt.jmeno}">Krteček</td>
+                <td th:text="${kontakt.stat}">Česko</td>
+                <td th:text="${kontakt.telefon}">+420123456789</td>
+                <td><a th:href="${kontakt.id + '.html'}"
+                       href="detail.html">Detail</a></td>
+            </tr>
+            <tr th:remove="all">
+                <td>1001</td>
+                <td>Myška</td>
+                <td>Čína</td>
+                <td>+86 123 456 123</td>
+                <td><a href="detail.html">Detail</a></td>
+            </tr>
+            <tr th:remove="all">
+                <td>1002</td>
+                <td>Zajíc</td>
+                <td>Japonsko</td>
+                <td>+81 111 222 333</td>
+                <td><a href="detail.html">Detail</a></td>
+            </tr>
+        </table>
+
+
+    </div>
+</body>
+</html>

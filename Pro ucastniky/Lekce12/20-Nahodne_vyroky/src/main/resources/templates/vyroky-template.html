@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Seznam vtipnych vyroku</title>
+</head>
+<body>
+
+    <h1>Seznam výroků</h1>
+    <h2 th:text="${jedenVyrok}"></h2>
+
+    <ul>
+        <li th:each="vyrok : ${seznamVyroku}">
+            <span th:text="${vyrok}">Text1</span>
+        </li>
+    </ul>
+
+</body>
+</html>
