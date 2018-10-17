@@ -36,13 +36,12 @@ není třeba vystavovat.
 
 ### Pár tipů
 
-* Vyjděte ze šablony projektu z hodiny (Czechitas Java Web App Template). Složku si prostě okopírujte a otevřete ji v
+* Vyjděte ze šablony projektu z hodiny (Czechitas Java Web App Template v4). Složku si prostě okopírujte a otevřete ji v
   IntelliJ IDEA. Po otevření je nutné přejmenovat tato místa, kde je jméno a adresa aplikace uvedena v konfiguračních
   souborech:
   * PROJEKT/src/main/resources/application.properties -> server.context-path = /ukol02
-  * PROJEKT/pom.xml -> /project/groupId = cz.czechitas.java2
   * PROJEKT/pom.xml -> /project/artifactId = ukol02
-  * PROJEKT/pom.xml -> /project/name = Meme Generator
+  * PROJEKT/pom.xml -> /project/name = ukol02
   * PROJEKT/pom.xml -> /project/build/finalName = ukol02
 * Archív .war vytvoříte v pravém panelu Maven Projects -> Lifecycle -> clean a potom Maven Projects -> Lifecycle ->
   package.
@@ -57,20 +56,21 @@ není třeba vystavovat.
   šipky. Adresa vašeho webu je potom http://localhost:8080/ukol02. Případně místo /ukol02 to, co jste uvedly v
   application.properties -> server.context-path. V tomto případě stačí pouze editovat zdrojové soubory webu a obnovovat
   stránku v prohlížeči.
-* Pro zajímavost, jméno výsledného archívu .war se nastavuje v PROJEKT/pom.xml -> /project/build/finalName
+* Pro zajímavost: jméno výsledného archívu .war se nastavuje v PROJEKT/pom.xml -> /project/build/finalName.
 
 ### Odevzdání domácího úkolu
 
+**Před odevzdáním úkolu smažte z projektu složku *target*!**
+
 Domácí úkol (celou složku s projektem, ne jen výsledný webový archív .war!) zabalte pomocí 7-Zipu pod jménem
 **Ukol02-Vase_Jmeno.7z**. (Případně lze použít prostý zip, například na Macu). Takto vytvořený archív nahrajte na Google
-Drive do složky Ukol02.
+Drive do složky [Úkol 02](https://drive.google.com/drive/u/0/folders/1lpGsjGEg2manycQISOVqpv3q1M8FqYnj).
 
 Takto vytvořený archív .war (ukol02.war) nasaďte do vašeho lokálního Tomcatu (JAVA-TRAINING/Tomcat/webapps) a
-vyzkoušejte, že funguje ( http://localhost:8080/ukol02/ ).
+vyzkoušejte, že funguje (http://localhost:8080/ukol02/).
 
-Po odladění nasaďte tento archív ještě přes FTP na server Tomcat.cloud ( http://sladkost.tomcat.cloud/ukol02/ ).
-
-Vytvořte snímek obrazovky spuštěného programu a pochlubte se s ním ve fotoalbu Ukol02 na Facebooku.
+Vytvořte snímek obrazovky spuštěného programu a pochlubte se s ním
+[v galerii na Facebooku](https://www.facebook.com/media/set/?set=oa.681080945607137&type=3).
 
 Pokud byste chtěli odevzdat revizi úkolu (např. po opravě), zabalte ji a nahrajte ji na stejný Google Drive znovu, jen
-tentokrát se jménem **Ukol02-Vase_Jmeno-verze2.7z**
+tentokrát se jménem **Ukol02-Vase_Jmeno-verze2.7z**.
