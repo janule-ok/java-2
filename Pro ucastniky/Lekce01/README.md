@@ -27,7 +27,7 @@ případně si prohlédnout [celý playlist](https://www.youtube.com/playlist?li
 Úkol - Experimentování se statickým webem a Tomcatem
 ----------------------------------------------------
 
-Cílem domácího úkolu je vytvořit jednoduchý statický web a nasadit je na Tomcat.
+Cílem domácího úkolu je vytvořit jednoduchý statický web a nasadit jej na Tomcat.
 
 ### Krátký popis
 
