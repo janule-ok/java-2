@@ -398,7 +398,6 @@ Jak bude web vypadat, necháme na vás. Ukázkový web můžete vidět na
 
 * Trik s cestami, aby se soubory se šablonami daly pořád otevírat jako statické soubory: &lt;link rel="stylesheet"
   href="../static/css/styles.css" th:href="${'css/styles.css'}" /&gt;.
-* Pokud si nebudete vůbec vědět rady, v odevzdávárně je můj vzorový domácí úkol. Snažte se ho ale nepoužít.
 * Vyjděte ze šablony projektu z hodiny (Czechitas Web App Template v4). Složku si prostě okopírujte a otevřete ji v
   IntelliJ IDEA. Po otevření je nutné přejmenovat tato místa, kde je jméno a adresa aplikace uvedena v konfiguračních
   souborech:
@@ -406,8 +405,6 @@ Jak bude web vypadat, necháme na vás. Ukázkový web můžete vidět na
     * PROJEKT/pom.xml -> /project/artifactId = ukol03
     * PROJEKT/pom.xml -> /project/name = ukol03
     * PROJEKT/pom.xml -> /project/build/finalName = ukol03
-* Archív .war vytvoříte v pravém panelu Maven Projects -> Lifecycle -> clean a potom Maven Projects -> Lifecycle ->
-  package.
 * Pozor! Mezi zdrojovým projektem (složkou) a výsledným webovým archívem .war je velký rozdíl. Do Tomcatu se nasazuje
   výsledný archív .war, do odevzdávárny na Google Drivu se nahrává zazipovaná složka celého projektu.
 * Do Tomcatu se NIKDY nekopíruje rozbalená složka webu, pouze archív .war. Tomcat si tento archív sám rozbalí.
@@ -427,13 +424,13 @@ Jak bude web vypadat, necháme na vás. Ukázkový web můžete vidět na
 
 Domácí úkol (celou složku s projektem, ne jen výsledný webový archív .war!) zabalte pomocí 7-Zipu pod jménem
 **Ukol03-Vase_Jmeno.7z**. (Případně lze použít prostý zip, například na Macu). Takto vytvořený archív nahrajte na Google
-Drive do složky Ukol03.
+Drive do složky [Úkol 03](https://drive.google.com/drive/u/0/folders/1BbJ2zWeFuPu7NMYZrKGMj_wGY8xCIUHn).
 
 Takto vytvořený archív .war (ukol03.war) nasaďte do vašeho lokálního Tomcatu (JAVA-TRAINING/Tomcat/webapps) a
 vyzkoušejte, že funguje (http://localhost:8080/ukol03/).
 
 Vytvořte snímek obrazovky spuštěného programu a pochlubte se s ním
-v galerii na Facebooku.
+[v galerii na Facebooku](https://www.facebook.com/media/set/?set=oa.683126742069224&type=3).
 
 Pokud byste chtěli odevzdat revizi úkolu (např. po opravě), zabalte ji a nahrajte ji na stejný Google Drive znovu, jen
 tentokrát se jménem **Ukol03-Vase_Jmeno-verze2.7z**.
