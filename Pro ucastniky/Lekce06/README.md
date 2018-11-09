@@ -122,7 +122,7 @@ Bootem).
 
 Domácí úkol (celou složku s projektem, ne jen výsledný webový archív .war!) zabalte pomocí 7-Zipu pod jménem
 **Ukol06-Vase_Jmeno.7z**. (Případně lze použít prostý zip, například na Macu). Takto vytvořený archív nahrajte na Google
-Drive do složky Ukol06.
+Drive do složky [Úkol 06](https://drive.google.com/drive/u/0/folders/1dVYfSJZnGcYSOpYdkrNKf7IWC4hlN4Vi).
 
 Vytvořte archív .war v IntelliJ IDEA -> Maven Projects -> ukol -> Lifecycle -> clean a následně IntelliJ IDEA -> Maven
 Projects -> ukol -> Lifecycle -> package. Goal "package" vytvoří archív .war v PROJEKT/target/ukol06.war. Nasaďte jej do
@@ -130,7 +130,8 @@ vašeho lokálního Tomcatu (JAVA-TRAINING/Tomcat/webapps) a vyzkoušejte, že f
 
 Po odladění nasaďte tento archív ještě na server Tomcat.cloud.
 
-Vytvořte snímek obrazovky spuštěného programu a pochlubte se s ním v galerii na Facebooku.
+Vytvořte snímek obrazovky spuštěného programu a pochlubte se s ním v galerii
+[na Facebooku](https://www.facebook.com/media/set/?set=oa.692685634446668&type=3).
 
 Pokud byste chtěli odevzdat revizi úkolu (např. po opravě), zabalte ji a nahrajte ji na stejný Google Drive znovu, jen
 tentokrát se jménem **Ukol06-Vase_Jmeno-verze2.7z**.
