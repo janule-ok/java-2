@@ -45,21 +45,18 @@ muzete vyuzit ve svoji implementaci **CustomerRepository**.
 
 ### Daily Planet - druha cast
 
-Druha cast je **povinna** jen **pro pokrocile studentky**.
+Druha cast je **nepovinna**.
 
-Adaptujte predchozi ukol 07 (Daily planet) take na databazovou repository. Repository bude mit stejne hlavicky metod,
-jako v puvodni verzi (v ukolu 07). Pro jejich implementaci cerpejte inspiraci z repository ve VideoBossu.
+Adaptujte predchozi ukol 06 (Daily planet) take na databazovou repository. Repository bude mit stejne hlavicky metod,
+jako v puvodni verzi (v ukolu 06). Pro jejich implementaci cerpejte inspiraci z repository ve VideoBossu.
 
-Pro Daily Planet si budete muset zalozit v MySQL serveru novou databazi. A to jak lokalne (**localhost**), tak az
-aplikaci budete chtit nasadit na Tomcat.cloud, tak stejnym zpusobem jeste jednou na **db.tomcat.cloud**.
-
-Pokud byste nemely hotovy ukol 07 a chtely se vrhnout rovnou na tento, vyjdete z meho reseni ukolu 07 v odevzdavarne.
+Pro Daily Planet si budete muset zalozit v MySQL serveru novou databazi.
 
 ### Detaily zadani
 
 #### Webove stranky VideoBoss - prvni cast
 
-Podklady webovych stranek VideoBoss si muzete stahnout zde: VideoBoss-podklady.zip
+Podklady webovych stranek VideoBoss si muzete stahnout zde: [VideoBoss-podklady](VideoBoss-podklady/).
 
 ##### Repository pro VideoBoss
 
@@ -142,9 +139,7 @@ Aby se skutecne preskakoval, zkontrolujte, ze vase metoda **findAll()** pouziva 
 
 ##### Nasazeni na Tomcat.cloud
 
-VideoBoss vystavte na vas Tomcat.cloud na https://sladkost.tomcat.cloud/ukol09/. Pokud jste pokrocila studentka a musite
-:-) tudiz delat i druhou cast (Daily Planet), pak VideoBoss nasadte jako **ukol09videoboss** a Daily Planet jako
-**ukol09**.
+VideoBoss vystavte na vas Tomcat.cloud na https://bohyne.tomcat.cloud/ukol09/.
 
 Na serveru Tomcat.cloud jiz MySQL server bezi a jiz v sobe ma databazi VideoBoss, nemusite proto vasi lokalni databazi
 kopirovat na Tomcat.cloud. V aplikaci nemusite nic menit, protoze pri instantciovani MariaDbDataSource jste totiz uvedly
@@ -155,6 +150,8 @@ Poznamka: To take znamena, ze domaci ukoly vsech z vas budou *v produkcnim nasaz
 k ni, prosim, hezky a moc tam zaznamy nemazte :-)
 
 #### Daily Planet - druha cast
+
+**Tato část úkolu je nepovinná.**
 
 ##### Zalozeni nove databaze
 
@@ -172,17 +169,17 @@ oblasti se otevre SQL konzole, ze ktere vymazte jakekoliv puvodni prikazy (pokud
 
 Vlozte prikazy nize.
 
-Poznamka: Jmeno databaze necht obsahuje jmeno vasi sladkosti. Moje jmeno je margot.
+Poznamka: Jmeno databaze necht obsahuje jmeno vasi bohyne. Moje jmeno je apollo.
 
 Poznamka: Aby se provedly konkretni prikazy, je vzdy nutne oznacit tyto prikazy a stisknout zelenou sipku Execute nad
 konzoli.
 
 ```sql
-CREATE DATABASE DailyPlanet_margot
+CREATE DATABASE DailyPlanet_apollo
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_czech_ci;
 
-USE DailyPlanet_margot;
+USE DailyPlanet_apollo;
 
 CREATE TABLE Clanky (
   ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -196,22 +193,22 @@ Pro archivacni ucely je dobre vykonany skript ulozit jako textovy soubor do proj
 napr. **PROJEKT/zalozeni_db.sql**. Opravujici lektor/kouc si tak bude moct zalozit stejnou databazi, jako mate vy u
 sebe.
 
-Az to budete mit, zalozte si novy data source v IntelliJ IDEA prave pro databazi **DailyPlanet_sladkost**. IntelliJ IDEA
+Az to budete mit, zalozte si novy data source v IntelliJ IDEA prave pro databazi **DailyPlanet_bohyne**. IntelliJ IDEA
 -> pod-okno Database -> Tlacitko + (pridat) -> DataSource -> MariaDB. Objevi se dialog. Vyplnte:
 
-    Name:       DailyPlanet_sladkost Global DataSource
+    Name:       DailyPlanet_bohyne Global DataSource
     Host:       localhost
     Port:       3306
-    Database:   DailyPlanet_sladkost
+    Database:   DailyPlanet_bohyne
     User:       student
     Password:   password
 
 Stisknete Test Connection a overte, ze se do databaze jde pripojit. Dale kliknete pravym tlacitkem mysi v seznamu
-Project Data Sources na **DailyPlanet_sladkost Global DataSource** a zvolte Make global. Data source se presune do
-skupiny Global Data Sources. **DailyPlanet_sladkost Global DataSource** tim padem nebude svazany s timto ani jimym
+Project Data Sources na **DailyPlanet_bohyne Global DataSource** a zvolte Make global. Data source se presune do
+skupiny Global Data Sources. **DailyPlanet_bohyne Global DataSource** tim padem nebude svazany s timto ani jimym
 projektem, ale bude nakonfigurovan globalne v IntelliJ IDEA.
 
-Pokud byste si chtely zalozit i jine tabulky nez jen **Clanek**, jde na **DailyPlanet_sladkost Global DataSource**
+Pokud byste si chtely zalozit i jine tabulky nez jen **Clanek**, jde na **DailyPlanet_bohyne Global DataSource**
 kliknout pravym tlacitkem mysi v pod-okne Database a zvolit New -> Table. V dialogovem okne Create New Table si muzete
 naklikat pozadovanou formu nove tabulky. V dolni polovine se zobrazuje SQL skript, ktery se skutecne odesle do databaze
 a zalozi danou tabulku. Tento skript si pred odeslanim uschovejte a pridejte ho k domacimu ukolu do
@@ -241,21 +238,7 @@ DELETE FROM Clanky WHERE ID = ?
 
 ##### Nasazeni na Tomcat.cloud
 
-Pro odevzdani ukolu jej bude nutne nasadit jeste na Tomcat.cloud. Na Tomcat.cloudu take bezi MySQL server a pripojit se
-k nemu muzete pres internet uplne stejne jako k vasemu lokalnimu MySQL, jen pri zakladani data sourcu v IntelliJ IDEA
-nevyplnite **localhost**, ale **db.tomcat.cloud**.
-
-Na MySQL serveru na Tomcat.cloudu je vytvorena pouze databaze VideoBoss, ale zadne dalsi.
-
-Zalozte si tedy nejprve novy data source v IntelliJ IDEA (v pod-okne Database), ktery povede na tuto existujici databazi
-**VideoBoss** na **db.tomcat.cloud**.
-
-Pripojte se k ni a pomoci SQL konzole v IntelliJ IDEA (Open Console) odeslete prikazy na zalozeni nove databaze
-**DailyPlanet-sladkost** (na **db.tomcat.cloud**).
-
-Nakonec si zalozte jeste posledni novy data source v IntelliJ IDEA (v pod-okne Database), ktery uz povede na vasi prave zalozenou databazi DailyPlanet-sladkost na db.tomcat.cloud z minuleho kroku.
-
-Web Daily Planet vystavte na vas Tomcat.cloud na https://sladkost.tomcat.cloud/ukol09/.
+**Tento úkol na tomcat.cloud nenasazujte, neměly byste tam pro svoji aplikaci odpovídající databázi.**
 
 ### Tipy
 
@@ -273,7 +256,7 @@ Web Daily Planet vystavte na vas Tomcat.cloud na https://sladkost.tomcat.cloud/u
 
 Domácí úkol (celou složku s projektem, ne jen výsledný webový archív .war!) zabalte pomocí 7-Zipu pod jménem
 **Ukol09-Vase_Jmeno.7z**. (Případně lze použít prostý zip, například na Macu). Takto vytvořený archív nahrajte na Google
-Drive do složky Ukol09.
+Drive do složky [Úkol 09](https://drive.google.com/drive/u/0/folders/1ZMfXutn3Wnx-i-_YgCHyVNmILRVdbbdG).
 
 Vytvořte archív .war v IntelliJ IDEA -> Maven Projects -> ukol -> Lifecycle -> clean a následně IntelliJ IDEA -> Maven
 Projects -> ukol -> Lifecycle -> package. Goal "package" vytvoří archív .war v PROJEKT/target/ukol09.war. Nasaďte jej do
@@ -282,7 +265,7 @@ vašeho lokálního Tomcatu (JAVA-TRAINING/Tomcat/webapps) a vyzkoušejte, že f
 Po odladění nasaďte tento archív ještě na server Tomcat.cloud.
 
 Vytvořte snímek obrazovky spuštěného programu a pochlubte se s ním v galerii
-na Facebooku.
+[na Facebooku](https://www.facebook.com/media/set/?set=oa.707961716252393&type=3).
 
 Pokud byste chtěli odevzdat revizi úkolu (např. po opravě), zabalte ji a nahrajte ji na stejný Google Drive znovu, jen
 tentokrát se jménem **Ukol09-Vase_Jmeno-verze2.7z**.
