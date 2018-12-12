@@ -96,7 +96,7 @@ metody neprikladam. Bud si ji muzete napsat samy nebo program modifikujte a nepo
     private Customer pridej(Customer zaznamKPridani) {
         Customer zakaznik = clone(zaznamKPridani);
         GeneratedKeyHolder drzakNaVygenerovanyKlic = new GeneratedKeyHolder();
-        String sql = "INSERT INTO customers (Firstname, Lastname, Address, Version) " +
+        String sql = "INSERT INTO Customers (Firstname, Lastname, Address, Version) " +
                 "VALUES (?, ?, ?, ?)";
         odesilacDotazu.update((Connection con) -> {
                     PreparedStatement prikaz = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -114,7 +114,7 @@ metody neprikladam. Bud si ji muzete napsat samy nebo program modifikujte a nepo
     private Customer updatuj(Customer zaznamKUlozeni) {
         Customer zakaznik = clone(zaznamKUlozeni);
         odesilacDotazu.update(
-                "UPDATE customers SET Firstname = ?, Lastname = ?, Address = ?, Version = Version + 1 WHERE id = ? AND Version = ?",
+                "UPDATE Customers SET Firstname = ?, Lastname = ?, Address = ?, Version = Version + 1 WHERE id = ? AND Version = ?",
                 zakaznik.getFirstName(),
                 zakaznik.getLastName(),
                 zakaznik.getAddress(),
@@ -126,7 +126,7 @@ metody neprikladam. Bud si ji muzete napsat samy nebo program modifikujte a nepo
 
     public void delete(Long id, int version) {
         odesilacDotazu.update(
-                "UPDATE customers SET Deleted = TRUE, Version = Version + 1 WHERE id = ? AND Version = ?",
+                "UPDATE Customers SET Deleted = TRUE, Version = Version + 1 WHERE id = ? AND Version = ?",
                 id,
                 version);
     }
