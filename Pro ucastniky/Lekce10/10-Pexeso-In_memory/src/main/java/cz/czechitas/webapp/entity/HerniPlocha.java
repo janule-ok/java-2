@@ -17,6 +17,10 @@ public class HerniPlocha {
         this.stav = stav;
     }
 
+    public Karta najdi(int cisloKartyNaKterouSeKliknulo) {
+        return karticky.get(cisloKartyNaKterouSeKliknulo);
+    }
+
     public Long getId() {
         return id;
     }
