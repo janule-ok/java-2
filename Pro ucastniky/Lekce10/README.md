@@ -14,7 +14,10 @@ případně si prohlédnout [celý playlist](https://www.youtube.com/playlist?li
 
 Ukolem je zprovoznit pexeso na webu.
 
-Materialy pro pexeso najdete zde: Ukol10-pexeso.zip
+Materialy pro pexeso najdete zde: [10-Pexeso-In\_memory](10-Pexeso-In_memory),
+[20-Pexeso-Bez\_logiky](20-Pexeso-Bez_logiky).
+
+Ukázkové pexeso můžete vidět na [https://margot.tomcat.cloud/ukol10/](https://margot.tomcat.cloud/ukol10/).
 
 #### 1. Rozbehnuti a prozkoumani architektury
 
