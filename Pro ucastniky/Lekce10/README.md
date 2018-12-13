@@ -165,7 +165,7 @@ private HerniPlocha pridejHerniPlochu(HerniPlocha plocha) {
 
 private void pridejKarticku(Karta karticka, Long plochaId, int poradiKarty) {
     GeneratedKeyHolder drzakNaVygenerovanyKlic = new GeneratedKeyHolder();
-    String sql = "INSERT INTO karty (CisloKarty, Stav, HerniPlochaID, PoradiKarty) " +
+    String sql = "INSERT INTO Karty (CisloKarty, Stav, HerniPlochaID, PoradiKarty) " +
             "VALUES (?, ?, ?, ?)";
     odesilacDotazu.update((Connection con) -> {
                 PreparedStatement prikaz = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
