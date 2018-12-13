@@ -43,9 +43,9 @@ public class PexesoService {
         HerniPlocha aktualniPlocha = ulozisteHer.findOne(idHerniPlochy);
 
         if (aktualniPlocha.getStav() == StavHry.HRAC1_VYBER_PRVNI_KARTY) {
-            vyberPrvniKartu(cisloKartyNaKterouSeKliknulo, aktualniPlocha);
+            vyberPrvniKartu(poziceKartyNaKterouSeKliknulo, aktualniPlocha);
         } else if (aktualniPlocha.getStav() == StavHry.HRAC1_VYBER_DRUHE_KARTY) {
-            vyberDruhouKartu(cisloKartyNaKterouSeKliknulo, aktualniPlocha);
+            vyberDruhouKartu(poziceKartyNaKterouSeKliknulo, aktualniPlocha);
         } else if (aktualniPlocha.getStav() == StavHry.HRAC1_ZOBRAZENI_VYHODNOCENI) {
             List<Karta> karticky = vyhodnotOtoceneKarticky(aktualniPlocha);
 
