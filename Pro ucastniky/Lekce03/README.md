@@ -89,7 +89,7 @@ Mrkněte se na to. Ideální by bylo napsat si za (nepovinný) úkol malou webov
 
 * HTTP je klasický protokol. HTTPS je to stejné, jen šifrované (proti odposlechu).
 * Pokud není uvedeno číslo síťového portu, pak se předpokládá 80 pro HTTP a 443 pro HTTPS.
-* pokus.com a www.pokus.com jsou zcela jiné internetové adresyy serveru. Obvykle jsou nasměrovány na stejný server, ale
+* `pokus.com` a `www.pokus.com` jsou zcela jiné internetové adresyy serveru. Obvykle jsou nasměrovány na stejný server, ale
   vůbec tomu tak být nemusí.
 * localhost znamená vždycky tento počítač (z hlediska počítače tedy požadavek sám na sebe).
 
