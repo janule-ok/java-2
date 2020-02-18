@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="WAR">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="10-SimpleWeb.war">
-      <element id="artifact" artifact-name="WAR exploded" />
-    </root>
-  </artifact>
-</component>
