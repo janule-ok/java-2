@@ -1,123 +1,113 @@
-Lekce 01 - Úkol
-===============
+Úkol 01 - Experimentování se statickým webem a Tomcatem
+-------------------------------------------------------
 
-Úkol - Experimentování se statickým webem a Tomcatem
-----------------------------------------------------
+Cílem domácího úkolu je vytvořit jednoduché statické stránky a nasadit je na Tomcat.
 
-Cílem domácího úkolu je vytvořit 2 jednoduché statické weby a nasadit je na váš Tomcat.cloud.
 
-1. Váš osobní webík o čemkoliv
-1. Rozcestník domácích úkolů
 
 ### Krátký popis
 
-#### Část 1 a 2 - Váš osobní webík
+#### Váš osobní webík
 
 Úkolem bude připravit si svůj osobní web (například na úrovni jednodenního workshopu Tvořím web HTML/CSS
 [https://www.czechitas.cz/cs/co-delame/tvorim-web](https://www.czechitas.cz/cs/co-delame/tvorim-web)). Webové stránky
-(index.html, styly.css, ...) můžete buď napsat v nově založeném projektu v IntelliJ IDEA od začátku nebo použít
-existující webové soubory a přidat je do nově založeného projektu v IntelliJ IDEA. Tak jako tak je třeba web nasadit
-lokálně na Tomcat a odladit. Odladěný web bude třeba nasadit na Tomcat.cloud.
+(index.html, styly.css, ...) nejprve zkuste napsat v nově založeném projektu v IntelliJ IDEA od začátku.
+Druhý krok bude použít existující webové stránky a převést je do javové webové aplikace se zabudovaným webovým serverem.
+Třetí krok bude tuto webovou aplikaci nasadit na samostatně běžící webový server Tomcat.
 
-#### Část 3 - Webový rozcestník k domácím ukolům
 
-Druhý statický web, který bude třeba vytvořit, je úvodní stránka, která bude fungovat jako rozcestník pro vaše domácí
-úkoly na Tomcat.cloudu.
-
-I ten bude za úkol vytvořit v projektu v IntelliJ IDEA a nasadit na Tomcat.cloud.
-
-Ukázku řešení lze najít na
-
-* [http://margot.tomcat.cloud/](http://margot.tomcat.cloud/)
-* [http://margot.tomcat.cloud/ukol01simple/](http://margot.tomcat.cloud/ukol01simple/)
-* [http://margot.tomcat.cloud/ukol01/](http://margot.tomcat.cloud/ukol01/)
 
 ### Detailní popis
 
 #### Část 1 - Váš osobní webík
 
-Abychom měli s čím experimentovat, budeme potřebovat nějaký váš web. Může to klidně být i váš již existující web nebo
+Abyste měli s čím experimentovat, budete potřebovat nějaký svůj web. Může to klidně být i již existující web nebo
 statické webové stránky odkudkoliv. Pokud se necítíte na tvorbu vlastního webu, můžete si klidně půjčit nějaký
-existující web. Například [http://krystufek.rolecek.cz/](http://krystufek.rolecek.cz/). Pro psaní webu existuje na internetu spousta návodů.
+existující web. Například <http://krystufek.rolecek.cz/>.
 
-Web můžete tvořit v libovolném textovém editoru. Za úkol je ale vyzkoušet IntelliJ IDEA. V IntelliJ IDEA založte nový
-projekt -> Static web -> Složka CESTA\_K\_JAVA-TRAINING/Projects/WebLekce01/Ukol01-Simple. V projektu založte podsložku
-static a do ní připravte celý web (začněte s index.html).
+Pro psaní webu existuje na internetu spousta návodů.
+Můžete zkusit třeba online kurz od Luďka Rolečka
+<https://www.czechitas.cz/cs/blog/zaciname-s-it/online-kurz-uvod-do-html-css-1-lekce>.
 
-Projekt bude vypadat takto:
+Dále můžete zkusit kurz Codecademy o základech HTML+CSS "Make a Website"
+<https://www.codecademy.com/learn/make-a-website>.
+Je třeba vytvořit si na Codecademy účet (což doporučuju, mají spoustu bezva kurzů na úplné základy).
+Poslední ze čtyř lekcí - Bootstrap - můžete úplně s klidným svědomím vynechat.
 
-![](img/ukol01-static-web-project.png)
+Web byste sice mohli tvořit v libovolném textovém editoru, ale je třeba se naučit pracovat s IntelliJ IDEA.
+V IntelliJ IDEA založte nový projekt -> `Static web`.
+V průvodci vyplňte (pokud jste na Windows, použijte zpětná lomítka, JAVA_TRAINING je C:\Java-Training, pokud jste na macOS, použijte dopředná lomítka a JAVA_TRAINING je /Users/VASE_UZIVATELSKE_JMENO/Java-Training):
+`Project name: JednoduchyWeb`
+`Project location: JAVA-TRAINING/Projects/Java-2/Lekce01-Ukol/10-JednoduchyWeb`
+`Module name: web-module`
+`Content root: JAVA-TRAINING/Projects/Java-2/Lekce01-Ukol/10-JednoduchyWeb`
+`Module file location: JAVA-TRAINING/Projects/Java-2/Lekce01-Ukol/10-JednoduchyWeb/.idea`
+
+Projekt je vlastně jen složka s konfiguračními soubory v podsložce `.idea`.
+Připravte do projektu celý web (začněte souborem `index.html`).
+
+Projekt může vypadat takto:
+
+![Screenshot](img/ukol01-static-web-project.png)
 
 Stránky můžete během editování zobrazit přímo v prohlížeči zadáním adresy:
 
-Na windows: **file:///C:/Java-Training/Projects/WebLekce01/Ukol01-Simple/static/index.html**
+Na Windows: **file:///C:/Java-Training/Projects/Java-2/Lekce01-Ukol/10-JednoduchyWeb/index.html**
 
-Na Macu: **file:///Users/VASE\_JMENO/Java-Training/Projects/WebLekce01/Ukol01-Simple/static/index.html**
+Na macOS: **file:///Users/VASE_UZIVATELSKE_JMENO/Java-Training/Projects/Java-2/Lekce01-Ukol/10-JednoduchyWeb/index.html**
 
-IntelliJ dokáže vyrobit výsledný .war/.zip soubor k nasazení. Zvolte File -> Project Structure -> Artifacts -> + (Přidat) -> Other
+Smyslem této části je použít IntelliJ IDEA jako prostý textový editor, bez jakékoliv vazby na Javu.
+IntelliJ IDEA - Ultimate Edition je výborný editor i jen na prosté HTML + CSS + JavaScript.
 
-* Name: Distribucni archiv WAR
-* Output: CESTA\_K\_JAVA-TRAINING/Projects/WebLekce01/Ukol01-Simple/target
-* Include in project build: Ano (zaškrtnout)
-* Pod tím ikonka zipu (Create Archive): ukol01simple.war
-* Pravým tlačítkem na <output root>, Add copy of... -> Directory content -> Ukol01-Simple/static
 
-Ukázka správně nakonfigurováného artifactu:
-
-![](img/ukol01-artifact.png)
-
-Archív .war vytvoříte v menu Build -> Rebuild Project nebo Build -> Build Artifacts...
-
-Takto vytvořený archív .war nasaďte do vašeho lokálního Tomcatu (CESTA\_K\_JAVA-TRAINING/Tomcat/webapps) a vyzkoušejte,
-že funguje ([http://localhost:8080/ukol01simple/](http://localhost:8080/ukol01simple/)).
-
-Po odladění nasaďte tento archív ještě přes FTP na server Tomcat.cloud ([http://sladkost.tomcat.cloud/ukol01simple/](http://sladkost.tomcat.cloud/ukol01simple/)).
 
 #### Část 2 - Osobní webík v javovém projektu v IntelliJ IDEA
 
-Druhý úkol je převod osobního webíku do předpřipraveného javového projektu v IntelliJ IDEA. Ten získáte zde:
-Ukol01.zip. Web z minulé části (obsah složky static) překopírujte do nového projektu do složky
-PROJEKT/src/main/resources/static. Projekt už má nastavený artifact (ukol01.war), takže opět stačí pouze Build ->
-Rebuild project nebo Build -> Build Artifacts a ve složce target budete mít výsledný archív .war, který opět nasaďte do
-lokálního Tomcatu ([http://localhost:8080/ukol01/](http://localhost:8080/ukol01/)) a po finalním odladění přes FTP na
-Tomcat.cloud ( [http://sladkost.tomcat.cloud/ukol01/](http://sladkost.tomcat.cloud/ukol01/)).
+Druhá část je převod osobního webíku do předpřipraveného javového projektu ve Spring Bootu.
+Javový projekt vytvoříte zkopírováním původního projektu z Lekce01 `30-JavaSimpleWeb`.
+Celou složku zkopírujte do `JAVA-TRAINING/Projects/Java-2/Lekce01-Ukol`.
 
-Poznámka: Ve složce static a ve výsledném archívu .war si můžete všimnout konfiguračního souboru WEB-INF/web.xml. To je
-konfigurační soubor pro Tomcat. Zatím ho ignorujte.
+1. Složku přejmenujte na `20-JavaWeb`
+2. Otevřete projekt v IntelliJ IDEA a změňte následující údaje v projektových konfiguračních souborech:
+3. PROJEKT/pom.xml -> `<artifactId>ukol01</artifactId>`
+4. PROJEKT/pom.xml -> `<name>ukol01</name>`
+5. PROJEKT/pom.xml -> `<finalName>ukol01</finalName>`
+6. PROJEKT/src/main/resources/application.properties -> `server.servlet.context-path=/ukol01`
+8. Schvalte bublinu **Maven projects need to be imported** volbou **Import changes**.
 
-Během psaní můžete využít ještě třetí možnost nasazení: Na Tomcat zabudovaný přímo v projektu (jako knihovna). Ten
-spustíte pomocí klasického spouštěcího tlačítka (zelená šipka vpravo nahoře v IntelliJ IDEA). Otevře se vám okno
-zabudovaného webového serveru a zobrazí se adresa, kterou překopírujte do
-prohlížeče. (např. [http://localhost/ukol01/](http://localhost/ukol01/)) Výhoda tohoto postupu je, že můžete stránky
-měnit rovnou v editoru a pro zobrazení změny pouze obnovit stránku v prohlížeči (Ctrl+F5).
+Web z minulé části (obsah projektové složky vyjma podsložky `.idea`) překopírujte do tohoto projektu do složky
+`PROJEKT/src/main/resources/static`. Projekt by měl být spustitelný zelenou šipkou vpravo nahoře.
+Po spuštění se ve spodním rámu (v textové konzoli) IntelliJ IDEA vypíše mimo jiné
+adresa do prohlížeče. Něco jako `http://localhost:51552/ukol01`.
+Projekt ještě polaďte a vyzkoušejte, že všechno funguje jak má, odkazy směřují na platné stránky
+a obrázky a kaskádové styly jsou správně zobrazeny.
+Vyzkoušejte také, že se jakékoliv změny ve zdrojových souborech okamžitě projevují
+ve webovém prohlížeči po obnovení stránky stiskem F5 nebo Ctrl+F5.
 
 Ukázka možného řešení webu (všimněte si souborů ve složce PROJEKT/src/main/resources/static)
 
-![](img/ukol01-static-web-project-reseni.png)
+![Screenshot](img/ukol01-static-web-project-reseni.png)
 
-#### Část 3 - Webový rozcestník k domacím ukolům
+Tento projekt budete odevzdávat do Odevzdávárny jako domácí úkol.
 
-Posledním úkolem je vytvořit webovou stránku - rozcestník pro vaše budoucí domácí úkoly.
 
-Na Tomcat.cloud budete postupem kurzu nasazovat domácí úkoly na adresy
 
-* http://sladkost.tomcat.cloud/ukol01/
-* http://sladkost.tomcat.cloud/ukol02/
-* http://sladkost.tomcat.cloud/ukol03/
-* atd.
+#### Část 3 - Nasazení na Tomcat
 
-a já bych chtěl, aby na ně vedl odkaz z vaší hlavní stránky http://sladkost.tomcat.cloud/.
+Po odladění svého webu v javové webové aplikaci (uvnitř IntelliJ IDEA)
+jej nasaďte do plnotučného webového serveru Tomcat, stejně, jak jsme to dělali v hodině.
+Až budete mít přístup na webový server na internetu v cloudu, bude se na něj nasazovat stejně.
 
-To zařídíte tak, že vytvoříte ještě jednu webovou aplikaci a nasadíte ji pod názvem ROOT (archív ROOT.war).
+Postupujte tak, že nejprve zastavíte případný běžící projekt v IntelliJ IDEA,
+vytvoříte distribuční archív v pravém menu **Maven projects**
+-> Lifecycle -> `clean` a potom **Maven projects** -> Lifecycle -> `package`.
+Vznikne tak soubor PROJEKT/target/ukol01.war.
+Ten překopírujte do složky TOMCAT/webapps.
+Tomcat nastartujete spuštěním TOMCAT/bin/startup.bat.
 
-Postupovat můžete buď jako v části 1 nebo jako v části 2. Doporučuji použít druhý způsob a předpřipravený projekt zde:
-Ukoly-Rozcestnik.zip.
 
-Na FTP Tomcat.cloudu to pak může vypadat takto:
 
-![](img/ukol01-nasazeni.png)
-
-Pár tipů:
+#### Pár tipů:
 
 * **Pozor! Mezi zdrojovým projektem (složkou) a výsledným webovým archívem .war je velký rozdíl. Do Tomcatu se nasazuje
   výsledný archív .war, do odevzdávárny na Google Drivu se nahrává zazipovaná složka celého projektu.**
@@ -125,17 +115,33 @@ Pár tipů:
 * **Pokud se chcete zbavit nasazené webové aplikace z Tomcatu, smažte pouze archív .war ve složce
   TOMCAT/webapps. Nemažte rozbalenou složku webu. Tomcat sám pozná, že jste odebrali zdrojový archív .war a rozbalenou
   složku smaže sám. To slouží zároveň jako potvrzení, že byla webová aplikace úspěšně sesazena.**
-* **Pro psaní doporučuji používat javový projekt se zabudovaným malým Tomcatem, který spustíte klasicky pomocí zelené
-  šipky. Okno zabudovaného Tomcatu vám vypíše adresu pro prohlížeč. V tomto případě stačí pouze editovat zdrojové
-  soubory webu a obnovovat stránku v prohlížeči.**
+* **Pouze pokud by Tomcat zrovna neběžel, můžete smazat nejen archív .war, ale i rozbalenou složku z TOMCAT/webapps.**
+* **Pro psaní doporučuji používat javový projekt se zabudovaným malým webovým serverem, který spustíte klasicky pomocí zelené
+  šipky. Okno zabudovaného webového serveru vám vypíše adresu pro prohlížeč, na kterou kliknutím stránku v prohlížeči otevřete.
+  Nyní již stačí pouze editovat zdrojové soubory (index.html, ...), pokaždé zmáčknout Ctrl+F9 a obnovit stránku v prohlížeči (F5).**
+
+
 
 ### Odevzdání domácího úkolu
 
-Domácí úkol (celé složky s projekty, ne jen výsledné webové archívy!) zabalte pomocí 7-Zipu pod jménem
-**Ukol01-Vase_Jmeno.7z**. (Případně lze použít prostý zip, například na Macu). Takto vytvořený archív nahrajte na Google
-Drive do složky Ukol01.
+Nejprve appku/appky zbavte přeložených spustitelných souborů.
+Zařídíte to tak, že v IntelliJ IDEA vpravo zvolíte
+Maven Projects -> Lifecycle -> Clean.
+Úspěch se projeví tak, že v projektové složce zmizí
+podsložka `target`.
+Následně složku s projektem
+zabalte pomocí 7-Zipu pod jménem `Ukol-CISLO-Vase_Jmeno.7z`.
+(Případně lze použít prostý zip, například na Macu).
+Takto vytvořený archív nahrajte na Google Drive do Odevzdávárny.
 
-Vytvořte snímek obrazovky spuštěného programu a pochlubte se s ním v galerii na Facebooku.
+Vytvořte snímek obrazovky spuštěného programu (webové stránky) a vložte jej
+do galerie `Ukol CISLO` ve skupině našeho kurzu na Facebooku.
 
-Pokud byste chtěli odevzdat revizi úkolu (např. po opravě), zabalte ji a nahrajte ji na stejný Google Drive znovu, jen
-tentokrát se jménem **Ukol01-Vase_Jmeno-verze2.7z**.
+Pokud byste chtěli odevzdat revizi úkolu (např. po opravě),
+zabalte ji a nahrajte ji na stejný Google Drive znovu,
+jen tentokrát se jménem `Ukol-CISLO-Vase_Jmeno-verze2.7z`.
+
+Termín odevzdání je dva dny před další lekcí, nejpozději 23:59.
+Tedy pokud je další lekce ve čtvrtek, termín je úterý 23:59.
+Pokud úkol nebo revizi odevzdáte později,
+prosím pošlete svému opravujícímu kouči/lektorovi email nebo zprávu přes FB.
