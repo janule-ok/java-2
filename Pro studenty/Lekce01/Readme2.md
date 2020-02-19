@@ -17,6 +17,8 @@ Webový prohlížeč a webový server
 - localhost vs. IP adresa
 - Jednoduchý web (10-SimpleWeb)
 
+
+
 ### Videozáznam
 
 Na YouTube je k dispozici:
