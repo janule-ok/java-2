@@ -1,3 +1,10 @@
+Úkol 00 - Registrace IntelliJ IDEA
+----------------------------------
+
+Jednotlivým skutečným domácím úkolům předchází ještě jeden poněkud netradiční (ale neméně důležitý): zaregistrovat si
+samotné vývojové prostředí, které budeme po celý kurz používat. Zadání tohoto úkolu naleznete [v samostatném
+dokumentu](Ukol_00.md).
+
 Úkol 01 - Experimentování se statickým webem a Tomcatem
 -------------------------------------------------------
 
