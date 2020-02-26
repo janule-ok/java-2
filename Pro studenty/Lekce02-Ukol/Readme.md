@@ -18,30 +18,39 @@ Mohl by vypadat třeba takto:
 
 
 
-#### Pár tipů
+### Pár tipů
+
+* Pokud si nebudete vůbec vědět rady, v odevzdávárně je můj vzorový domácí úkol. Snažte se ho ale nepoužít.
 
 * Vyjděte ze šablony projektu z hodiny (Czechitas Web App Template). Složku si prostě okopírujte a otevřete ji v
   IntelliJ IDEA. Po otevření je nutné přejmenovat tato místa, kde je jméno a adresa aplikace uvedena v konfiguračních
   souborech:
-  * PROJEKT/src/main/resources/application.properties -> server.context-path = /ukol02
-  * PROJEKT/pom.xml -> /project/groupId = cz.czechitas.java2
-  * PROJEKT/pom.xml -> /project/artifactId = ukol02
-  * PROJEKT/pom.xml -> /project/name = Meme Generator
-  * PROJEKT/pom.xml -> /project/build/finalName = ukol02
+  * `PROJEKT/src/main/resources/application.properties` -> `server.servlet.context-path` = `/ukol02`
+  * `PROJEKT/pom.xml` -> `/project/groupId` = `cz.czechitas.java2`
+  * `PROJEKT/pom.xml` -> `/project/artifactId` = `ukol02`
+  * `PROJEKT/pom.xml` -> `/project/name` = `ukol02`
+  * `PROJEKT/pom.xml` -> `/project/build/finalName` = `ukol02`
+
 * Archív .war vytvoříte v pravém panelu Maven Projects -> Lifecycle -> clean a potom Maven Projects -> Lifecycle ->
   package.
+
 * Pozor! Mezi zdrojovým projektem (složkou) a výsledným webovým archívem .war je velký rozdíl. Do Tomcatu se nasazuje
   výsledný archív .war, do odevzdávárny na Google Drivu se nahrává zazipovaná složka celého projektu.
+
 * Do Tomcatu se NIKDY nekopíruje rozbalená složka webu, pouze archív .war. Tomcat si tento archív sám rozbalí.
+
 * Pokud se chcete zbavit nasazené webové aplikace z Tomcatu a máte ho spuštěný, smažte pouze archív .war ve složce
-  TOMCAT/webapps. Nemažte rozbalenou složku webu. Tomcat sám pozná, že jste odebrali zdrojový archív .war a rozbalenou
+  `TOMCAT/webapps`. Nemažte rozbalenou složku webu. Tomcat sám pozná, že jste odebrali zdrojový archív .war a rozbalenou
   složku smaže sám. To slouží zároveň jako potvrzení, že byla webová aplikace úspěšně sesazena.
-  Pouze pokud by Tomcat zrovna neběžel, můžete smazat nejen archív .war, ale i rozbalenou složku z TOMCAT/webapps.
+  Pouze pokud by Tomcat zrovna neběžel, můžete smazat nejen archív .war, ale i rozbalenou složku z `TOMCAT/webapps`.
+
 * Pro psaní doporučuji používat javový projekt se zabudovaným malým webovým serverem, který spustíte klasicky pomocí zelené
-  šipky. Adresa vašeho webu je potom http://localhost:8080/ukol02. Případně místo /ukol02 to, co jste uvedly v
-  application.properties -> server.context-path. V tomto případě stačí pouze editovat zdrojové soubory webu a obnovovat
+  šipky. Adresa vašeho webu je potom http://localhost:8080/ukol02. Případně místo `/ukol02` to, co jste uvedli v
+  `application.properties` -> `server.servlet.context-path`. V tomto případě stačí pouze editovat zdrojové soubory webu a obnovovat
   stránku v prohlížeči.
-* Pro zajímavost, jméno výsledného archívu .war se nastavuje v PROJEKT/pom.xml -> /project/build/finalName
+
+* Pro zajímavost, jméno výsledného archívu .war se nastavuje v `PROJEKT/pom.xml` -> `/project/build/finalName`
+
 
 
 ### Odevzdání domácího úkolu

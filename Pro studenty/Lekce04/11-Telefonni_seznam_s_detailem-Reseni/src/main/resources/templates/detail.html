@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Telefonní seznam</title>
+</head>
+<body>
+    <!--/*@thymesVar id="kontakt" type="cz.czechitas.webapp.TelefonniKontakt"*/-->
+
+    <div class="page">
+
+        <h1>Telefonní kontakt</h1>
+
+        <table>
+            <tr>
+                <td>Osoba</td>
+                <td th:text="${kontakt.jmeno}">Jaroslav Hašek</td>
+            </tr>
+            <tr>
+                <td>Telefon</td>
+                <td th:text="${kontakt.telefon}">+420 777 112233</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td th:text="${kontakt.email}">jaroslav@svejk.cz</td>
+            </tr>
+            <tr>
+                <td>Město</td>
+                <td th:text="${kontakt.mesto}">Praha</td>
+            </tr>
+            <tr>
+                <td>Stát</td>
+                <td th:text="${kontakt.stat}">Česko</td>
+            </tr>
+        </table>
+
+
+    </div>
+</body>
+</html>

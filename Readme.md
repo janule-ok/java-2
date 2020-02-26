@@ -1,84 +1,85 @@
-Kurz Java 2 - webové aplikace pro mírnì pokroèilé
+Kurz Java 2 - webovÃ© aplikace pro mÃ­rnÄ› pokroÄilÃ©
 =================================================
 
-Kurz o tvorbì webovıch aplikací v Javì nad frameworkem Spring Boot ve 12 lekcích po 2,5 hodiny a 8 domácích úkolech.
+Kurz o tvorbÄ› webovÃ½ch aplikacÃ­ v JavÄ› nad frameworkem Spring Boot ve 12 lekcÃ­ch po 2,5 hodiny a 8 domÃ¡cÃ­ch Ãºkolech.
 
 
 
-Náplò lekcí
+NÃ¡plÅˆ lekcÃ­
 -----------
 
-1.  Úvodní lekce, koncept webového serveru, webovıch stránek, webové aplikace
-    - Domácí úkol: Vytvoøit jednoduché webové stránky a nasadit je na server
-2.  Dynamicky generovaná stránka
-    - Náhodné èíslo, hod kostkou
-    - Náhodnı vırok
-    - Domácí úkol: Meme generátor
-3.  Více o šablonách stránek
-    - for-each v šablonì
-        - dynamicky generovanı seznam (Stringù)
-        - dynamicky generovaná tabulka (Zboí)
-    - Koncept Thymeleaf a staticky zobrazitelná šablona v prohlíeèi (bez Javy)
-    - Domácí úkol: Stránka s kartièkami pexesa
-4.  Odkazy mezi webovımi stránkami
-    - Relativní vs. absolutní cesta
+1.  ÃšvodnÃ­ lekce, koncept webovÃ©ho serveru, webovÃ½ch strÃ¡nek, webovÃ© aplikace
+    - DomÃ¡cÃ­ Ãºkol: VytvoÅ™it jednoduchÃ© webovÃ© strÃ¡nky a nasadit je na server
+2.  Dynamicky generovanÃ¡ strÃ¡nka
+    - NÃ¡hodnÃ© ÄÃ­slo, hod kostkou
+    - NÃ¡hodnÃ½ vÃ½rok
+    - DomÃ¡cÃ­ Ãºkol: Meme generÃ¡tor
+3.  VÃ­ce o Å¡ablonÃ¡ch strÃ¡nek
+    - for-each v Å¡ablonÄ›
+        - dynamicky generovanÃ½ seznam (StringÅ¯)
+        - dynamicky generovanÃ¡ tabulka (ZboÅ¾Ã­)
+    - Koncept Thymeleaf a staticky zobrazitelnÃ¡ Å¡ablona v prohlÃ­Å¾eÄi (bez Javy)
+    - DomÃ¡cÃ­ Ãºkol: StrÃ¡nka s kartiÄkami pexesa
+4.  OpakovÃ¡nÃ­, upevnÄ›nÃ­ lÃ¡tky
+    - Odkazy mezi webovÃ½mi strÃ¡nkami
+    - RelativnÃ­ vs. absolutnÃ­ cesta
     - Seznam vs. detail
-    - Seznam obrázkù bezdomovcù
-5.  Formuláøe
-    - Kalkulaèka
-    - Husy a králíci
-    - Domácí úkol: Velbloudi
-6.  Úkrok stranou - teorie List, Set, Comparator
-    - Bezdomovci - formuláø s vyhodnocením
-7.  Data a informaèní systémy
-    - DailyPlanet - editovatelnı seznam èlánkù
-    - Domácí úkol: Seznam kontaktù - editace
-8.  Síová komunikace, HTTP, GET vs. POST, vzor Repository
-    - DailyPlanet - ukázky provádìny zde
-    - Seznam kontaktù - samostatná práce provádìna zde
-    - Domácí úkol: Seznam kontaktù - Repository (vèetnì mazání a pøidávání)
-9.  Databázovı server, pøístup do databáze z Javy
-    - Konzolová aplikace - select long
-    - Konzolová aplikace - select String
-    - Konzolová aplikace - select Customer
-    - Webová aplikace - select Customer
-    - Domácí úkol: Webová aplikace - select Clanek
+    - Seznam obrÃ¡zkÅ¯ bezdomovcÅ¯
+5.  FormulÃ¡Å™e
+    - KalkulaÄka
+    - Husy a krÃ¡lÃ­ci
+    - DomÃ¡cÃ­ Ãºkol: Velbloudi
+6.  Ãškrok stranou - teorie List, Set, Comparator
+    - Bezdomovci - formulÃ¡Å™ s vyhodnocenÃ­m
+7.  Data a informaÄnÃ­ systÃ©my
+    - DailyPlanet - editovatelnÃ½ seznam ÄlÃ¡nkÅ¯
+    - DomÃ¡cÃ­ Ãºkol: Seznam kontaktÅ¯ - editace
+8.  SÃ­Å¥ovÃ¡ komunikace, HTTP, GET vs. POST, vzor Repository
+    - DailyPlanet - ukÃ¡zky provÃ¡dÄ›ny zde
+    - Seznam kontaktÅ¯ - samostatnÃ¡ prÃ¡ce provÃ¡dÄ›na zde
+    - DomÃ¡cÃ­ Ãºkol: Seznam kontaktÅ¯ - Repository (vÄetnÄ› mazÃ¡nÃ­ a pÅ™idÃ¡vÃ¡nÃ­)
+9.  DatabÃ¡zovÃ½ server, pÅ™Ã­stup do databÃ¡ze z Javy
+    - KonzolovÃ¡ aplikace - select long
+    - KonzolovÃ¡ aplikace - select String
+    - KonzolovÃ¡ aplikace - select Customer
+    - WebovÃ¡ aplikace - select Customer
+    - DomÃ¡cÃ­ Ãºkol: WebovÃ¡ aplikace - select Clanek
 10. JDBC Repository
-    - Domácí úkol: Panenky v databázi
-11. Úkrok stranou - start.spring.io, REST API, nasazení na Heroku?
-12. Opakování, demo validací
+    - DomÃ¡cÃ­ Ãºkol: Panenky v databÃ¡zi
+11. Ãškrok stranou - start.spring.io, REST API, nasazenÃ­ na Heroku?
+12. OpakovÃ¡nÃ­, demo validacÃ­
 
 
 
 Instalace
 ---------
 
-Na kurz je nutné mít nainstalovanou IntelliJ IDEA - Ultimate Edition, JDK, Tomcat a MariaDB.
-Musejí bıt pøesnì nastavené, proto je **nutné** pouít pøesnì pøedpøipravenı archív
-podle návodu: https://javainstall.czechitas.cz/ultimate/
+Na kurz je nutnÃ© mÃ­t nainstalovanou IntelliJ IDEA - Ultimate Edition, JDK, Tomcat a MariaDB.
+MusejÃ­ bÃ½t pÅ™esnÄ› nastavenÃ©, proto je **nutnÃ©** pouÅ¾Ã­t pÅ™esnÄ› pÅ™edpÅ™ipravenÃ½ archÃ­v
+podle nÃ¡vodu: https://javainstall.czechitas.cz/ultimate/
 
 
 
-Termíny jednotlivıch lekcí
+TermÃ­ny jednotlivÃ½ch lekcÃ­
 --------------------------
 
-Kurz probíhá jednou tıdnì, tøi mìsíce.
+Kurz probÃ­hÃ¡ jednou tÃ½dnÄ›, tÅ™i mÄ›sÃ­ce.
 
-Je zcela zásadní, aby studenti chodili na všechny hodiny a nevynechávali je. Na kadé lekci se uèí nìco nového
+Je zcela zÃ¡sadnÃ­, aby studenti chodili na vÅ¡echny hodiny a nevynechÃ¡vali je. Na kaÅ¾dÃ© lekci se uÄÃ­ nÄ›co novÃ©ho
 a snadno by jim jinak mohl ujet vlak.
 
-Druhou zásadní podmínkou je vypracovat všech 8 domácích úkolù. Domácí úkoly mají povinné a dobrovolné èásti
-(aby neodradily ani pokroèilejší ani zaèáteèniètìjší studenty).
-Kadému je tøeba vìnovat nìkolik hodin, napøíklad o víkendu. Domácí úkoly se ukázaly jako
-nejefektivnìjší zpùsob, jak se látku nauèit. Studenti tím dostávají èas s Javou poøádnì experimentovat a nauèit se øešit problémy samostatnì.
-Je dokonce moné øešit úkoly ve dvojici.
+Druhou zÃ¡sadnÃ­ podmÃ­nkou je vypracovat vÅ¡ech 8 domÃ¡cÃ­ch ÃºkolÅ¯. DomÃ¡cÃ­ Ãºkoly majÃ­ povinnÃ© a dobrovolnÃ© ÄÃ¡sti
+(aby neodradily ani pokroÄilejÅ¡Ã­ ani zaÄÃ¡teÄniÄtÄ›jÅ¡Ã­ studenty).
+KaÅ¾dÃ©mu je tÅ™eba vÄ›novat nÄ›kolik hodin, napÅ™Ã­klad o vÃ­kendu. DomÃ¡cÃ­ Ãºkoly se ukÃ¡zaly jako
+nejefektivnÄ›jÅ¡Ã­ zpÅ¯sob, jak se lÃ¡tku nauÄit. Studenti tÃ­m dostÃ¡vajÃ­ Äas s Javou poÅ™Ã¡dnÄ› experimentovat a nauÄit se Å™eÅ¡it problÃ©my samostatnÄ›.
+Je dokonce moÅ¾nÃ© Å™eÅ¡it Ãºkoly ve dvojici.
 
 
 
 Licence
 -------
 
-Materiály jsou vystaveny pod Apache Public Licence a mùete je pouívat, jak uznáte za vhodné.
-Jedinou podmínkou je uvedení pùvodních autorù.
-Autor je Kamil Ševeèek.
-Dále pøispìli: Ondøej Kuèera, Hana Klimentová.
+MateriÃ¡ly jsou vystaveny pod Apache Public Licence a mÅ¯Å¾ete je pouÅ¾Ã­vat, jak uznÃ¡te za vhodnÃ©.
+Jedinou podmÃ­nkou je uvedenÃ­ pÅ¯vodnÃ­ch autorÅ¯.
+Autor je Kamil Å eveÄek.
+DÃ¡le pÅ™ispÄ›li: OndÅ™ej KuÄera, Hana KlimentovÃ¡.
