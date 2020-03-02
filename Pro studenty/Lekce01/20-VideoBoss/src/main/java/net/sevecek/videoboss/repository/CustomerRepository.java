@@ -5,13 +5,11 @@ import net.sevecek.videoboss.entity.*;
 
 public interface CustomerRepository {
 
-    List<Customer> findAllCustomers(int firstItem, int count);
+    List<Customer> findAll();
 
-    Customer findCustomer(Long id);
+    Customer findById(Long id);
 
-    Customer addCustomer(Customer customer);
+    Customer save(Customer customer);
 
-    Customer updateCustomer(Customer customer);
-
-    Customer deleteCustomer(Customer customer);
+    void delete(Customer customer);
 }

@@ -17,7 +17,7 @@ public class CustomersController {
 
     @RequestMapping("/customers/all.html")
     public String showAllCustomers(Map<String, Object> model) {
-        List<Customer> allCustomers = customerRepository.findAllCustomers(0, -1);
+        List<Customer> allCustomers = customerRepository.findAll();
         model.put("customers", allCustomers);
         return "customers/all";
     }
@@ -29,7 +29,7 @@ public class CustomersController {
     public String showEditCustomer(
             Map<String, Object> model,
             @PathVariable("id") Long customerId) {
-        Customer customer = customerRepository.findCustomer(customerId);
+        Customer customer = customerRepository.findById(customerId);
         model.put("customer", customer);
         return "customers/edit";
     }
@@ -40,7 +40,7 @@ public class CustomersController {
             @PathVariable("id") Long customerId,
             Customer customer) {
         customer.setId(customerId);
-        customerRepository.updateCustomer(customer);
+        customerRepository.save(customer);
         return "redirect:/customers/all.html";
     }
 
@@ -59,7 +59,7 @@ public class CustomersController {
             method = RequestMethod.POST)
     public String processAddCustomer(
             Customer customer) {
-        customerRepository.addCustomer(customer);
+        customerRepository.save(customer);
         return "redirect:/customers/all.html";
     }
 
@@ -70,7 +70,7 @@ public class CustomersController {
     public String processDeleteCustomer(
             @PathVariable("id") Long customerId,
             @PathVariable("version") int version) {
-        customerRepository.deleteCustomer(new Customer(customerId, version));
+        customerRepository.delete(new Customer(customerId, version));
         return "redirect:/customers/all.html";
     }
 }
