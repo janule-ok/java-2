@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cz.czechitas.java2</groupId>
-    <artifactId>aritmetika</artifactId>
+    <artifactId>formular-se-jmenem</artifactId>
     <version>1.0.0</version>
     <packaging>war</packaging>
 
-    <name>aritmetika</name>
+    <name>formular-se-jmenem</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -37,7 +37,7 @@
     </dependencies>
 
     <build>
-        <finalName>aritmetika</finalName>
+        <finalName>formular-se-jmenem</finalName>
 
         <plugins>
             <plugin>
