@@ -64,15 +64,16 @@ IntelliJ IDEA - Ultimate Edition je výborný editor i jen na prosté HTML + CSS
 #### Část 2 - Osobní webík v javovém projektu v IntelliJ IDEA
 
 Druhá část je převod osobního webíku do předpřipraveného javového projektu ve Spring Bootu.
-Javový projekt vytvoříte zkopírováním původního projektu z Lekce01 `30-JavaSimpleWeb`.
+Javový projekt vytvoříte zkopírováním původního projektu z Lekce01 `40-JavaSimpleWeb`.
 Celou složku zkopírujte do `JAVA-TRAINING/Projects/Java-2/Lekce01-Ukol`.
 
-1. Složku přejmenujte na `20-JavaWeb`
+1. Složku přejmenujte na `JednoduchyWebNadJavou`
 2. Otevřete projekt v IntelliJ IDEA a změňte následující údaje v projektových konfiguračních souborech:
 3. PROJEKT/pom.xml -> `<artifactId>ukol01</artifactId>`
 4. PROJEKT/pom.xml -> `<name>ukol01</name>`
 5. PROJEKT/pom.xml -> `<finalName>ukol01</finalName>`
 6. PROJEKT/src/main/resources/application.properties -> `server.servlet.context-path=/ukol01`
+7. PROJEKT/src/main/resources/application.properties -> `server.port=0`
 8. Schvalte bublinu **Maven projects need to be imported** volbou **Import changes**.
 
 Web z minulé části (obsah projektové složky vyjma podsložky `.idea`) překopírujte do tohoto projektu do složky
