@@ -26,27 +26,34 @@ Náplň lekcí
     - Seznam vs. detail
     - Seznam obrázků bezdomovců
 5.  Formuláře
+    - Jméno a příjmení
     - Kalkulačka
     - Husy a králíci
     - Domácí úkol: Velbloudi
-6.  Úkrok stranou - teorie List, Set, Comparator
-    - Bezdomovci - formulář s vyhodnocením
-7.  Data a informační systémy
+6.  Více o formulářích
+    - Nákupní seznam + formulářem přidávání
+    - Úkrok stranou - teorie List, Comparator
+    - Domácí úkol: Bezdomovci
+7.  Data, informační systémy
     - DailyPlanet - editovatelný seznam článků
+    - Vzor Repository
     - Domácí úkol: Seznam kontaktů - editace
-8.  Síťová komunikace, HTTP, GET vs. POST, vzor Repository
-    - DailyPlanet - ukázky prováděny zde
-    - Seznam kontaktů - samostatná práce prováděna zde
-    - Domácí úkol: Seznam kontaktů - Repository (včetně mazání a přidávání)
+8.  Opakování
+    - Síťová komunikace, porty, IP adresa, localhost
+    - HTTP, GET vs. POST
+    - start.spring.io
+    - Opakování vzoru Repository
 9.  Databázový server, přístup do databáze z Javy
     - Konzolová aplikace - select long
     - Konzolová aplikace - select String
     - Konzolová aplikace - select Customer
     - Webová aplikace - select Customer
+    - Webová aplikace - CustomerRepository
     - Domácí úkol: Webová aplikace - select Clanek
 10. JDBC Repository
     - Domácí úkol: Panenky v databázi
-11. Úkrok stranou - start.spring.io, REST API, nasazení na Heroku?
+11. REST API
+    - Bonus: Nasazení na Heroku
 12. Opakování, demo validací
 
 

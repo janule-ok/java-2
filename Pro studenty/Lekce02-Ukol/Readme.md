@@ -4,14 +4,9 @@ Lekce 02
 Úkol - Meme generátor
 ---------------------
 
-Cílem domácího úkolu je vytvořit jednoduchou webovou aplikaci, která bude generovat vtipné obrázky s texty.
-
-
-### Popis
-
-Cílem je udělat webovou aplikaci, která bude při každém zobrazení nebo obnovení stránky (F5) generovat náhodně vybranou
-dvojici obrázek + text.
-Jak bude web vypadat, necháme na vás.
+Vytvořte webovou aplikaci, která bude při každém zobrazení nebo obnovení stránky (F5) generovat náhodně vybranou
+dvojici obrázek + vtipný text.
+Jak bude web vypadat, nechám na vás.
 
 Mohl by vypadat třeba takto:
 ![Screenshot](img/ukol02-screenshot.png)
@@ -22,20 +17,25 @@ Mohl by vypadat třeba takto:
 
 * Pokud si nebudete vůbec vědět rady, v odevzdávárně je můj vzorový domácí úkol. Snažte se ho ale nepoužít.
 
+* Dejte pozor na to, aby stránky z `templates` šly otevřít i jen jako soubor přímo v prohlížeči bez webového serveru.
+  Sice budou mít statický obsah, ale měly by mít správně nastavený kaskádový styl i obrázky.
+  Například pro značku `<img>` mám na mysli atribut `src="..."` a `th:src="..."`.
+
 * Vyjděte ze šablony projektu z hodiny (Czechitas Web App Template). Složku si prostě okopírujte a otevřete ji v
   IntelliJ IDEA. Po otevření je nutné přejmenovat tato místa, kde je jméno a adresa aplikace uvedena v konfiguračních
   souborech:
   * `PROJEKT/src/main/resources/application.properties` -> `server.servlet.context-path` = `/ukol02`
-  * `PROJEKT/pom.xml` -> `/project/groupId` = `cz.czechitas.java2`
   * `PROJEKT/pom.xml` -> `/project/artifactId` = `ukol02`
   * `PROJEKT/pom.xml` -> `/project/name` = `ukol02`
   * `PROJEKT/pom.xml` -> `/project/build/finalName` = `ukol02`
 
-* Archív .war vytvoříte v pravém panelu Maven Projects -> Lifecycle -> clean a potom Maven Projects -> Lifecycle ->
-  package.
+* Nezapomeňte, že do odevzdávárny je nutné vkládat zip celého projektu bez složky `target`.
 
 * Pozor! Mezi zdrojovým projektem (složkou) a výsledným webovým archívem .war je velký rozdíl. Do Tomcatu se nasazuje
   výsledný archív .war, do odevzdávárny na Google Drivu se nahrává zazipovaná složka celého projektu.
+
+* Archív .war vytvoříte v pravém panelu Maven Projects -> Lifecycle -> clean a potom Maven Projects -> Lifecycle ->
+  package.
 
 * Do Tomcatu se NIKDY nekopíruje rozbalená složka webu, pouze archív .war. Tomcat si tento archív sám rozbalí.
 
@@ -44,10 +44,13 @@ Mohl by vypadat třeba takto:
   složku smaže sám. To slouží zároveň jako potvrzení, že byla webová aplikace úspěšně sesazena.
   Pouze pokud by Tomcat zrovna neběžel, můžete smazat nejen archív .war, ale i rozbalenou složku z `TOMCAT/webapps`.
 
-* Pro psaní doporučuji používat javový projekt se zabudovaným malým webovým serverem, který spustíte klasicky pomocí zelené
-  šipky. Adresa vašeho webu je potom http://localhost:8080/ukol02. Případně místo `/ukol02` to, co jste uvedli v
-  `application.properties` -> `server.servlet.context-path`. V tomto případě stačí pouze editovat zdrojové soubory webu a obnovovat
-  stránku v prohlížeči.
+* Pro psaní používejte javový projekt se zabudovaným malým webovým serverem, který spustíte klasicky pomocí zelené
+  šipky. Adresa vašeho webu je potom http&#58;//localhost:51234/ukol02. Případně místo `/ukol02` to, co jste uvedli v
+  `application.properties` -> `server.servlet.context-path`.
+  Pokud budete měnit pouze soubory ve složce static nebo templates,
+  pro načtení aktualizované stránky stačí znovu sestavit projekt (Build Project, Ctrl+F9)
+  a obnovit stránku v prohlížeči (F5 nebo Ctrl+F5).
+  Pokud byste změnili javové třídy, je nutné restartovat celý projekt.
 
 * Pro zajímavost, jméno výsledného archívu .war se nastavuje v `PROJEKT/pom.xml` -> `/project/build/finalName`
 

@@ -62,75 +62,12 @@ Takže já používám konstrukci:
 
 ### Videozáznam
 
-Na YouTube se můžete podívat na [záznam z lekce](https://www.youtube.com/watch?v=ekrr4AZMhMM),
-případně si prohlédnout [celý playlist](https://www.youtube.com/playlist?list=PLTCx5oiCrIJ6mcuJ1VaY8s0mzFsaMUzp-).
+Na YouTube je k dispozici:
+* [záznam z lekce (2019)](https://www.youtube.com/watch?v=HHWL4ByVWkQ)
+* [záznam z lekce (2018)](https://www.youtube.com/watch?v=ekrr4AZMhMM)
+* [záznam z lekce (2017)](https://www.youtube.com/watch?v=e6tmum7B9EQ)
 
-Úkol - Přihlašovací dialog
---------------------------
-
-Vytvořte webovou aplikaci, podle dodaných podkladů webových stránek
-[60-Daily_Planet-Prihlasovani-Podklady](60-Daily_Planet-Prihlasovani-Podklady/).
-
-V podkladech jsou pouze statické webové stránky, jak byste je mohli dostat od tvůrce webu. Vaším úkolem je tento
-statický web předělat do naší šablony Spring Bootu a rozběhnout základní funkcionalitu.
-
-### Popis stránek
-
-* **index.html**. Úvodní stránka. Za normálních okolností by z ní šlo na **hlavni.html**. Nicméně jsme se rozhodli, že
-  pro přístup na **hlavni.html** je nutné se nejprve přihlásit. Musí se tedy nejprve projít přes stránku
-  **prihlaseni.html**.
-* **prihlaseni.html**. Přihlašovací formulář. Po odeslání formuláře se na serveru zkontroluje zadaný email a
-  heslo. Stačí, když bude aplikace akceptovat napevno email **pokus@pokus.com** a heslo **password**. Nezapomeňte, že
-  **String**y se porovnávají pomocí **equals()**, nikoliv **==**. Tedy například
-  **vyplnenyFormular.getPrihlasovaciJmeno().equals("pokus@pokus.com")**. V případě platného přihlášení se prohlížeč
-  přesměruje na **hlavni.html**.  V případě neplatného přihlášení se znovu zobrazí původní stránka **prihlaseni.html** a
-  chybová hláška. Je velmi vhodné, aby zůstal vyplněný email z minulého pokusu.
-* **hlavni.html**. Stránka se seznamem. Buď použijte tu, která je ve statickém web designu, nebo jako bonus použijte
-  aplikaci z hodiny na evidenci telefonního seznamu.
-* **registrace.html**, **zapomenute-heslo.html**. Při přihlašování je typicky možné se i alternativně zaregistrovat a
-  nebo si vyžádat email se zapomenutým heslem. Rozchoďte tyto formuláře. Stačí, když budou fungovat "na oko", ale ve
-  skutečnosti žádný email posílat nebudou (zapomenute-heslo.html), ani neakceptují registraci nového uživatele
-  (registrace.html) a ve skutečnosti zůstane jediný možný email a heslo stále jen **pokus@pokus.com** a
-  **password**". Nepovinně bych ale velmi doporučoval zkusit si evidenci uživatelů naprogramovat.
-
-*Poznámka:* Takto naprogramované přihlašování samozřejmě funguje jen při přístupu z **index.html**. Pokud by uživatel
-přistoupil přímo k **hlavni.html**, nemusel by se přihlašovat. Tento problém neřešte a tvařme se, že neexistuje. Řešením
-je tzv. **HttpSession** a vložení přihlášeného uživatele do této **HttpSession**. Stránka **prihlaseni.html** by se
-potom zobrazovala automaticky, pokud by nebyl v **HttpSession** přihlášený uživatel.
-
-Jednak by to ale bylo pracné, ale zároveň je mnohem lepší použít existující autentizační framework, například Spring
-Security. Jeho složitost je ale daleko za rozsahem jednoho domácího úkolu.
-
-Ukázkový web můžete vidět na [https://margot.tomcat.cloud/ukol06/](https://margot.tomcat.cloud/ukol06/).
-
-Stránky musejí z prohlížeče fungovat jak při souborovém přístupu, tak při přístupu přes webový server (se Spring
-Bootem).
-
-### Pár tipů:
-
-* Vyjděte buď z příkladu z hodiny (Telefonní seznam) nebo ze šablony projektu (Czechitas Web App Template v4). Složku si
-  prostě okopírujte a otevřete ji v IntelliJ IDEA. Po otevření je nutné přejmenovat místa, kde je jméno a adresa
-  aplikace uvedena v konfiguračních souborech:
-    * PROJEKT/src/main/resources/application.properties -> server.context-path = /ukol06
-    * PROJEKT/pom.xml -> /project/artifactId = ukol06
-    * PROJEKT/pom.xml -> /project/name = ukol06
-    * PROJEKT/pom.xml -> /project/build/finalName = ukol06
-
-### Odevzdání domácího úkolu
-
-**Před odevzdáním úkolu smažte z projektu složku *target*!**
-
-Domácí úkol (celou složku s projektem, ne jen výsledný webový archív .war!) zabalte pomocí 7-Zipu pod jménem
-**Ukol06-Vase_Jmeno.7z**. (Případně lze použít prostý zip, například na Macu). Takto vytvořený archív nahrajte na Google
-Drive do složky Ukol06.
-
-Vytvořte archív .war v IntelliJ IDEA -> Maven Projects -> ukol -> Lifecycle -> clean a následně IntelliJ IDEA -> Maven
-Projects -> ukol -> Lifecycle -> package. Goal "package" vytvoří archív .war v PROJEKT/target/ukol06.war. Nasaďte jej do
-vašeho lokálního Tomcatu (JAVA-TRAINING/Tomcat/webapps) a vyzkoušejte, že funguje (http://localhost:8080/ukol06/).
-
-Po odladění nasaďte tento archív ještě na server Tomcat.cloud.
-
-Vytvořte snímek obrazovky spuštěného programu a pochlubte se s ním v galerii na Facebooku.
-
-Pokud byste chtěli odevzdat revizi úkolu (např. po opravě), zabalte ji a nahrajte ji na stejný Google Drive znovu, jen
-tentokrát se jménem **Ukol06-Vase_Jmeno-verze2.7z**.
+Případně je k dispozici playlist všech lekcí:
+* [Jaro 2019](https://www.youtube.com/playlist?list=PLTCx5oiCrIJ7I5m_zJtjZoLS-pxSi859Z)
+* [Jaro 2018](https://www.youtube.com/playlist?list=PLTCx5oiCrIJ6mcuJ1VaY8s0mzFsaMUzp-)
+* [Jaro 2017](https://www.youtube.com/playlist?list=PLUVJxzuCt9ATwP3dFn5xCHvObtu2EveNZ)
