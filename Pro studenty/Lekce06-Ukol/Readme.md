@@ -112,33 +112,33 @@ Po přidání formuláře `<form>` by to mohlo vypadat takto:
             <li>
                 ... obrazek ...
                 <label>
-                    <input type="radio" name="odpoved[0]" value="true"/>
+                    <input type="radio" name="odpovedi[0]" value="true"/>
                     Bezdomovec
                 </label>
                 <label>
-                    <input type="radio" name="odpoved[0]" value="false"/>
+                    <input type="radio" name="odpovedi[0]" value="false"/>
                     Profesor
                 </label>
             </li>
             <li>
                 ... obrazek ...
                 <label>
-                    <input type="radio" name="odpoved[1]" value="true"/>
+                    <input type="radio" name="odpovedi[1]" value="true"/>
                     Bezdomovec
                 </label>
                 <label>
-                    <input type="radio" name="odpoved[1]" value="false"/>
+                    <input type="radio" name="odpovedi[1]" value="false"/>
                     Profesor
                 </label>
             </li>
             <li>
                 ... obrazek ...
                 <label>
-                    <input type="radio" name="odpoved[2]" value="true"/>
+                    <input type="radio" name="odpovedi[2]" value="true"/>
                     Bezdomovec
                 </label>
                 <label>
-                    <input type="radio" name="odpoved[2]" value="false"/>
+                    <input type="radio" name="odpovedi[2]" value="false"/>
                     Profesor
                 </label>
             </li>
