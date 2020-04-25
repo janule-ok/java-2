@@ -1,29 +1,22 @@
 Lekce 09
 ========
 
-Úkol - Přístup do databáze SeznamKontaktu a DailyPlanet
--------------------------------------------------------
+Úkol - Seznam kontaktů s databází
+---------------------------------
 
-Podobně, jako jste v lekci pracovali s databází `VideoBoss` a zkoušeli jste z Javy provádět různé varianty příkazu `select`,
-zkuste si napsat podobnou konzolovou aplikaci pro práci s databází `SeznamKontaktu`.
-Databáze je v předinstalovaném serveru MariaDB předpřipravená, takže netřeba zakládat.
+Webovou aplikaci pro správu kontaktů upravte tak, abyste s pomocí *Repository* pracovali s datazí. Pro tyto účely máte k
+dispozici databázi `seznamkontaktu`.
 
-Udělejte minimálně:
-- `select` 1 záznamu
-- `select` všech záznamů
-- Nepovinně zkuste `update` 1 záznamu
-- Nepovinně zkuste `insert` nového záznamu
-- Nepovinně zkuste `delete` 1 záznamu podle ID
-
-Potom založte ještě jednu konzolovou aplikaci a to stejné proveďte ještě s databází DailyPlanet.
-
-V souboru snippets.txt z lekce je popis a návrhy nějakých dalších SQL příkazů, které můžete použít.
+Není účelem, abyste celou webovou aplikaci psali znovu (byť samozřejmě můžete). V ideálním případě vyjděte ze svého
+řešení domácího úkolu z lekce 7 (pozor, v zadání tehdejšího úkolu bylo přidávání a mazání nepovinné, v tomto úkolu už to
+považujme za povinnou součást). Alternativně můžete upravit projekt *92-Seznam_kontaktu-Repository_interface-Reseni* z
+lekce 8.
 
 
 
 ### Odevzdání domácího úkolu
 
-Nejprve appku/appky zbavte přeložených spustitelných souborů.
+Nejprve appku zbavte přeložených spustitelných souborů.
 Zařídíte to tak, že v IntelliJ IDEA vpravo zvolíte
 Maven Projects -> Lifecycle -> Clean.
 Úspěch se projeví tak, že v projektové složce zmizí
