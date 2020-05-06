@@ -4,7 +4,7 @@ Lekce 09
 Úkol - Seznam kontaktů s databází
 ---------------------------------
 
-Webovou aplikaci pro správu kontaktů upravte tak, abyste s pomocí *Repository* pracovali s datazí. Pro tyto účely máte k
+Webovou aplikaci pro správu kontaktů upravte tak, abyste s pomocí *Repository* pracovali s databází. Pro tyto účely máte k
 dispozici databázi `seznamkontaktu`.
 
 Není účelem, abyste celou webovou aplikaci psali znovu (byť samozřejmě můžete). V ideálním případě vyjděte ze svého
